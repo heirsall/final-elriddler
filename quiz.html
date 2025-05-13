@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Riddle Monster Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="monster">
+        <div class="face">😈</div>
+        <div class="hp" id="hpDisplay">❤️❤️❤️</div>
+      </div>
+      <div class="instruction">Answer the riddle to defeat the monster</div>
+      <div class="riddle-container">
+        <p id="riddle">Loading...</p>
+        <input type="text" id="answerInput" placeholder="Type your answer..." />
+        <button onclick="submitAnswer()">Submit</button>
+      </div>
+      <div class="countdown" id="countdown"></div>
+      <div class="button-rules">
+        <button onclick="document.location='index.html'">
+          Back to Read the Rules 🤧
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

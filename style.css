@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.rules-information {
+  margin: 50px;
+}
+
+.monster .face {
+  font-size: 100px;
+}
+
+.hp {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.riddle-container {
+  margin: 20px 0;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px 16px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.button-rules {
+  margin: 20px 0;
+}
+
+.countdown {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #0f0;
+}
