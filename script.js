@@ -1,10 +1,13 @@
 const riddles = [
-  { question: "What has to be broken before you can use it?", answer: "egg" },
   {
-    question: "I’m tall when I’m young, and I’m short when I’m old. What am I?",
-    answer: "candle",
+    question: "Bulan apa pertama kali El Riddler ngasih quiz?",
+    answer: "november",
   },
-  { question: "What month of the year has 28 days?", answer: "all" },
+  {
+    question: "Tunggu hint selanjutnya! 😤",
+    answer: "Mochamad Thiesa Nabil",
+  },
+  { question: "Tunggu hint selanjutnya! 😤", answer: "Mochamad Thiesa Nabil" },
 ];
 
 const hpKey = "monsterHP";
