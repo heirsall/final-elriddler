@@ -1,13 +1,22 @@
 const riddles = [
   {
-    question: "Bulan apa pertama kali El Riddler ngasih quiz?",
+    question: "Bulan apa pertama kali El Riddler ngasih quiz? 😤",
     answer: "november",
   },
   {
-    question: "Tunggu hint selanjutnya! 😤",
-    answer: "Mochamad Thiesa Nabil",
+    question: "Judul buku apa yang sedang dicuri El Riddler dari Sherlock?",
+    answer: "the hound of the baskervilles",
   },
-  { question: "Tunggu hint selanjutnya! 😤", answer: "Mochamad Thiesa Nabil" },
+  {
+    question: "Darimana El Riddler belajar bahasa Spanyol?",
+    answer: "duolingo",
+  },
+  { question: "Apa kekuatan asli dari El Riddler?", answer: "membaca pikiran" },
+  {
+    question:
+      "Iya atau tidak, El Riddler hanya bagian dari perwujudan seseorang?",
+    answer: "iya",
+  },
 ];
 
 const hpKey = "monsterHP";

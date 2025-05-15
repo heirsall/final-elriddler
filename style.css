@@ -1,7 +1,8 @@
 body {
   font-family: sans-serif;
-  background: #111;
-  color: #fff;
+  font-size: 14px;
+  background: #111111;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,18 +12,24 @@ body {
   overflow: auto;
 }
 
-.game-container {
+.game-container,
+.rules-container {
   text-align: center;
   max-width: 500px;
   width: 100%;
-  background-color: #222;
+  background-color: #222222;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
 }
 
-.rules-information {
-  margin: 30px 0;
+.rules-container {
+  text-align: left;
+}
+
+.rules-title {
+  text-align: center;
 }
 
 .monster .face {
@@ -31,7 +38,7 @@ body {
 
 .hp {
   margin: 10px 0;
-  font-size: 22px;
+  font-size: 32px;
 }
 
 .riddle-container {
@@ -45,51 +52,99 @@ input {
   max-width: 300px;
   border-radius: 6px;
   border: none;
+  box-sizing: border-box;
 }
 
 button {
   padding: 10px 20px;
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 15px;
   border: none;
   border-radius: 6px;
-  background-color: #0f0;
-  color: #000;
+  background-color: rgb(13, 185, 197);
+  color: #ffffff;
   cursor: pointer;
+  width: auto;
+  box-sizing: border-box;
 }
 
 .button-rules {
   margin: 20px 0;
+  text-align: center;
 }
 
 .countdown {
   font-size: 18px;
-  margin-top: 20px;
-  color: #0f0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: rgb(245, 210, 13);
 }
 
 /* Responsive tweaks */
 @media screen and (max-width: 600px) {
+  body {
+    padding: 8px;
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .game-container,
+  .rules-container {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .monster .face {
-    font-size: 60px;
+    font-size: 48px;
   }
 
   .hp {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .riddle-container {
+    margin: 12px 0;
   }
 
   input {
-    font-size: 14px;
+    font-size: 15px;
     width: 100%;
+    max-width: 100%;
+    padding: 8px;
   }
 
   button {
-    font-size: 14px;
+    font-size: 15px;
     width: 100%;
     margin: 10px 0 0;
+    padding: 10px 0;
   }
 
-  .game-container {
-    padding: 16px;
+  .countdown {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 400px) {
+  .monster .face {
+    font-size: 36px;
+  }
+  .game-container,
+  .rules-container {
+    padding: 6px;
+    border-radius: 6px;
+  }
+  input,
+  button {
+    font-size: 14px;
+    padding: 8px 0;
   }
 }
