@@ -13,9 +13,13 @@ const riddles = [
   },
   { question: "Apa kekuatan asli dari El Riddler?", answer: "membaca pikiran" },
   {
+    question: "Thiesa, apa arti kepanjangan dari nama berikut?",
+    answer: "tintin dan rosa",
+  },
+  {
     question:
-      "Iya atau tidak, El Riddler hanya bagian dari perwujudan seseorang?",
-    answer: "iya",
+      "Bisa diartikan sebagai kejutan atau juga orang suci, tapi hanya aku seorang yang paham artinya. Siapakah aku?",
+    answer: "alila khairunazhifa",
   },
 ];
 
@@ -40,7 +44,13 @@ function checkResetHP(hp) {
   const lastAnswered = localStorage.getItem(answerKey);
   const today = getTodayDate();
 
-  if (lastAnswered !== today && lastAnswered !== null) {
+  // Get yesterday's date string
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  const yesterdayStr = yesterday.toISOString().split("T")[0];
+
+  // If player did NOT answer yesterday, regenerate HP by 1 (up to maxHP)
+  if (lastAnswered !== yesterdayStr && lastAnswered !== today) {
     hp = Math.min(maxHP, hp + 1);
     saveHP(hp);
   }
@@ -84,7 +94,7 @@ function submitAnswer() {
   const today = getTodayDate();
 
   if (localStorage.getItem(answerKey) === today) {
-    alert("You already answered today!");
+    alert("You already answered today! 🧟");
     return;
   }
 
@@ -94,9 +104,13 @@ function submitAnswer() {
     hp = Math.max(0, hp - 1);
     saveHP(hp);
     localStorage.setItem(answerKey, today);
-    alert("Correct! Monster HP -1");
+    if (hp === 0) {
+      alert("Congratulations! You have defeated the monster! Mucho gracias 🎉");
+    } else {
+      alert("Correct! Monster HP -1 😵");
+    }
   } else {
-    alert("Wrong answer!");
+    alert("Tetott! Wrong answer 🤧");
   }
 
   displayHP(loadHP());
