@@ -1,15 +1,15 @@
 const riddles = [
   {
-    question: "Bulan apa pertama kali El Riddler ngasih quiz? 😤",
-    answer: "november",
+    question: "Tebak aku lahir tanggal dan bulan apa? 🏃‍♂️",
+    answer: "16 agustus",
   },
   {
-    question: "Judul buku apa yang sedang dicuri El Riddler dari Sherlock?",
-    answer: "the hound of the baskervilles",
+    question: "Siapa karakter favorit Haikyuu!! aku?",
+    answer: "yu nishinoya",
   },
   {
-    question: "Darimana El Riddler belajar bahasa Spanyol?",
-    answer: "duolingo",
+    question: "Yo aprendo espanol en duolingo?",
+    answer: "si",
   },
   { question: "Apa kekuatan asli dari El Riddler?", answer: "membaca pikiran" },
   {
@@ -17,15 +17,18 @@ const riddles = [
     answer: "tintin dan rosa",
   },
   {
-    question:
-      "Bisa diartikan sebagai kejutan atau juga orang suci, tapi hanya aku seorang yang paham artinya. Siapakah aku?",
-    answer: "alila khairunazhifa",
+    question: "Siapa yang lebih aneh, aku atau kamu?",
+    answer: "alila",
+  },
+  {
+    question: "Aku pasti lolos UTBK!",
+    answer: "aamiin",
   },
 ];
 
 const hpKey = "monsterHP";
 const answerKey = "answeredDate";
-const maxHP = 3;
+const maxHP = 5;
 
 function getTodayDate() {
   return new Date().toISOString().split("T")[0];
